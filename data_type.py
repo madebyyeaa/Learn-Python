@@ -1,0 +1,19 @@
+text = 'uang';                                          # String     (data yang hanya berupa text)
+number = 7;                                             # Integer    (data yang hanya berupa angka)
+decimal = 2.3;                                          # Float      (data yang berupa desimal)
+person = True;                                          # Boolean    (data yang hanya memiliki nilai true atau false)
+coordinates = (2.3, 1.4, 1.3);                          # Tuple
+tools = ['laptop','keyboard','mouse','monitor','cpu'];  # List       (data yang berisi kumpulan informasi data)
+unique = {1,2,3,3,4,5,6,7};                             # Set        (data tidak bisa duplicate)
+users = {'Nama' : 'Yoram', 'Belajar' : 'Python'};       # Dictionary (databerisi key dan value)
+
+# Cara mengecek tipe data yang digunakan di python print(type());
+
+print(type(text));
+print(type(number));
+print(type(decimal));
+print(type(person));
+print(type(coordinates));
+print(type(tools));
+print(type(unique));
+print(type(users));
