@@ -17,3 +17,15 @@ print(type(coordinates));
 print(type(tools));
 print(type(unique));
 print(type(users));
+
+# Latihan tipe data
+
+first_name: str = 'Yoram';
+last_name: str = 'Arijaya';
+age: int = 28;
+
+# Concatenation cara menggabungkan dua atau lebih data.
+print('Nama depan ' + first_name + ' dan nama belakang saya ' + last_name + ' umur saya', str(age));
+
+# f'' string = format, digunakan untuk membuat penulisan informasi data menjadi kelihatan rapi jika dibandingkan dengan cara concatenation.
+print(f'Nama depan saya {first_name} dan nama belakang saya {last_name}, umur saya {str(age)}');
