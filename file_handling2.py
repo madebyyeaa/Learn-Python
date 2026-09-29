@@ -30,11 +30,12 @@ while True:
 
         elif user_input == "3":
             newFile = input('Nama file: ')
-            if newFile == 'exist':
+            try :
+                with open(newFile, 'x') as file:
+                    file.write(newFile)
+                print(f'{newFile} was created!')
+            except FileExistsError :
                 print(f'Nama file sudah ada, buat dengan nama file lain')
-                break
-            with open(newFile, 'x') as file:
-                file.write(newFile)
 
         elif user_input == "4":
             print("Program dihentikan.")
@@ -44,6 +45,6 @@ while True:
             raise ValueError
 
     except ValueError:
-        print("Input harus berupa pilihan 1 sampai 3!")
+        print("Input harus berupa pilihan 1 sampai 4!")
 
 
