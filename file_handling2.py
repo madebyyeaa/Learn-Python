@@ -5,7 +5,8 @@ while True:
         menus: list[str] = [
             "1. Tambah data",
             "2. Lihat data",
-            "3. Keluar"
+            "3. Buat file baru",
+            "4. Keluar"
         ]
 
         for menu in menus:
@@ -18,14 +19,24 @@ while True:
               if nama == 'exit':
                   break
               
-              with open('karyawan.txt', 'r') as file:
+              with open('karyawan.txt', 'a') as file:
                 data = file.write(nama + '\n')
                 print("Data berhasil ditambahkan!")
 
         elif user_input == "2":
-            print("Menu Lihat Data")
+            with open('karyawan.txt', 'r') as file:
+                data = file.read()
+                print(data)
 
         elif user_input == "3":
+            newFile = input('Nama file: ')
+            if newFile == 'exist':
+                print(f'Nama file sudah ada, buat dengan nama file lain')
+                break
+            with open(newFile, 'x') as file:
+                file.write(newFile)
+
+        elif user_input == "4":
             print("Program dihentikan.")
             break
 
@@ -34,4 +45,5 @@ while True:
 
     except ValueError:
         print("Input harus berupa pilihan 1 sampai 3!")
+
 
