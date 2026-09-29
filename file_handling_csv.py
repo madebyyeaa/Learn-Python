@@ -1,4 +1,4 @@
-import csv #modul default dari python
+import csv #modul default dari python 
 
 # Membaca file CSV
 with open('karyawan.csv', 'r') as file :
@@ -7,7 +7,7 @@ with open('karyawan.csv', 'r') as file :
     for row in data:
         print(row)
 
-
+# Mengakses kolom tertentu
 with open('karyawan.csv', 'r') as file:
     data = csv.reader(file)
 
@@ -17,6 +17,7 @@ with open('karyawan.csv', 'r') as file:
         print(f'Gaji: {row[2]}')
         print('---')
 
+# CSV dictionary
 with open("karyawan.csv", "r") as file:
     data = csv.DictReader(file)
 
@@ -25,11 +26,20 @@ with open("karyawan.csv", "r") as file:
         print(row["jabatan"])
         print(row["gaji"])
 
-with open('karyawan_baru.csv', 'w', newline='') as file:
+# Membuat CSV dengan python
+data = [
+    ["nama", "jabatan", "gaji"],
+    ["Yoram", "IT Support", 3500000],
+    ["Andi", "Admin", 3200000],
+    ["Budi", "Supervisor", 5000000]
+]
+
+with open("karyawan_baru.csv", "w", newline="") as file:
     writer = csv.writer(file)
 
-    writer,writerows(data)
+    writer.writerows(data)
 
+# Menambahkan data dengan csv
 
 with open("karyawan.csv", "a", newline="") as file:
     writer = csv.writer(file)
