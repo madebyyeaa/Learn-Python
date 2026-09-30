@@ -2,11 +2,17 @@ import csv
 
 while True :
     try :
-        createFile = input('Buat nama file: ')
-        try:
-            with open(createFile, 'x') as file:
-                file.write(createFile)
-            print(f'{createFile} berhasil dibuat')
-        except FileExistsError :
-                print(f'Nama file sudah ada, buat dengan nama file lain')
-    except : # istirahat dulu ya mau tidur
+        print(f'===== DATA PRODUK =====')
+
+        with open('produk.csv', 'r') as file:
+            data = csv.DictReader(file)
+
+            for row in data:
+                print(row["kode"])
+                print(row["nama"])
+                print(row["harga"])
+                print(row["stok"])
+
+
+    except :
+        print(f'Jalankan ulang program')
