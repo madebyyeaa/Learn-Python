@@ -10,3 +10,5 @@ with open('produk.csv', 'r') as file:
         print(f'Harga : Rp.{row["harga"]},-')
         print(f'Stock : {row["stok"]}\n')
         print('-----------------------')
+
+
